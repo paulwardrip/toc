@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Rozha+One" rel="stylesheet"/>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@200;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
     <style>
-        h1, h3 {
-            font-family: "Rozha One"
+        h1 {
+            font-family: Raleway;
+            color: white;
+            margin-top: 2rem;
+        }
+        h3 {
+            font-family: "Playfair Display", sans-serif;
+            color: black;
         }
         body {
-            font-family: Raleway;
+            font-family: Lato;
             font-size: 15px;
-            background: #505050;
-            color: #A0A0A0;
+            background: turquoise;
+            color: dimgrey;
         }
         a {
             color: cornflowerblue;
@@ -20,43 +28,42 @@
         a:hover {
             color: lightgoldenrodyellow;
         }
+        .npm {
+            color: seashell;
+        }
         .bower {
-            color: lightseagreen;
+            color: darkgrey;
+        }
+        li {
+            margin: 1rem;
         }
     </style>
 </head>
-<body>
+<body class="container">
 
     <h1>Paul Wardrip's Git Projects</h1>
 
-    <h3>Applications</h3>
 
+    <h3>Newer Libraries (npm)</h3>
     <ul>
-        <li><i class="fa fa-commenting-o" aria-hidden="true"></i>
-            <strong><a href="https://paulwardrip.github.io/GoogleExportSMS/" target="_blank">GoogleExportSMS</a></strong>:
-            [<a href="https://github.com/paulwardrip/GoogleExportSMS" target="_blank">source</a>]
-            allows you to convert your Google Voice/Hangouts messages into SMS messages that can be imported into your Android phone.</li>
-
-        <li><i class="fa fa-music" aria-hidden="true"></i>
-            <strong><a href="https://paulwardrip.github.io/music-video-jukebox/" target="_blank">music-video-jukebox</a></strong>:
-            [<a href="https://github.com/paulwardrip/music-video-jukebox" target="_blank">source</a>]
-            add videos from youtube and this app will play you random songs from your library, you can skip songs.
-            You can pick a song you want to hear, by adding to the queue or you have the option to play immediately.
-            You can download a backup of your library and import it later, since the library is kept in localStorage.
-            This app is very, very functional ... but maybe not quite polished and complete. You may have to reload the
-            browser to get it playing after you add your first set of songs. Enjoy!
+        <li><i class="fas fa-book-dead" aria-hidden="true"></i><strong>bookmarklet-compiler</strong>
+            [<a href="https://github.com/paulwardrip/bookmarklet-compiler" target="_blank">source</a>] <span class="npm">(npm: bookmarklet-compiler)</span>
+            compiles a node.js script into a bookmarklet ready to be pasted into a bookmark in your browser
+        </li>
+        <li><i class="fas fa-toolbox" aria-hidden="true"></i><strong>hyperfocus-armyknife</strong>
+            [<a href="https://github.com/paulwardrip/hyperfocus-armyknife" target="_blank">source</a>] <span class="npm">(npm: @hyperfocus/armyknife)</span>
+            A collection of small utility classes to be imported as a whole, or individually as the user sees fit.
+        </li>
+        <li><i class="fa fa-check-square" aria-hidden="true"></i>
+            <strong><a href="https://paulwardrip.github.io/xmlschema.js/" target="_blank">xmlschema.js</a></strong>:
+            [<a href="https://github.com/paulwardrip/xmlschema.js" target="_blank">source</a>] <span class="npm">(npm: xmlschema.js)</span>
+            XML schema (xsd) validation written in pure Javascript, usable in the browser, node.js / ES6.
         </li>
     </ul>
 
-    <h3>Libraries</h3>
+    <h3>Older Libraries (bower)</h3>
 
     <ul>
-        <li><i class="fa fa-check-square" aria-hidden="true"></i>
-            <strong><a href="https://paulwardrip.github.io/xmlschema.js/" target="_blank">xmlschema.js</a></strong>:
-            [<a href="https://github.com/paulwardrip/xmlschema.js" target="_blank">source</a>] <span class="bower">(bower: xmlschema.js)</span>
-            xml schema (xsd) validation written in pure Javascript, usable in the browser.
-            Nearly all xsd features that are necessary for the majority of use cases have been implemented.
-        </li>
 
         <li><i class="fa fa-bolt" aria-hidden="true"></i>
             <strong><a href="https://paulwardrip.github.io/auto-lightbox/" target="_blank">auto-lightbox</a></strong>:
@@ -74,7 +81,7 @@
             a jQuery plugin for sizing or positioning elements on the page based on percentages of the height or width
             of a parent (or other specified) element.
         </li>
-
+<!--
         <li><i class="fa fa-book" aria-hidden="true"></i>
             journal: [<a href="https://github.com/paulwardrip/journal.js" target="_blank">source</a>] <span class="bower">(bower: journal)</span>
             a logging framework for the console log allowing you to turn on and off log messages at the levels:
@@ -83,7 +90,7 @@
             Using this framework you can leave in verbose debugging information without it being displayed in the
             console for your users.
         </li>
-
+-->
         <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>
             <strong><a href="https://paulwardrip.github.io/fieldvalidator/" target="_blank">fieldvalidator</a></strong>:
             [<a href="https://github.com/paulwardrip/fieldvalidator" target="_blank">source</a>] <span class="bower">(bower: fieldvalidator)</span>
@@ -91,6 +98,30 @@
             and regex patterns with the pattern attribute. Validates as the user stops typing or moves to the next field.
             Valid or invalid status support messages and are shown with animated color changes based on status.
             Colors and delays are configurable.
+        </li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+
+    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>
+        <strong><a href="https://paulwardrip.github.io/GoogleExportSMS/" target="_blank">GoogleExportSMS</a></strong>:
+        [<a href="https://github.com/paulwardrip/GoogleExportSMS" target="_blank">source</a>]
+        allows you to convert your Google Voice/Hangouts messages into SMS messages that can be imported into your Android phone.</li>
+
+
+
+        <li><i class="fa fa-music" aria-hidden="true"></i>
+            <strong><!-- a href="https://paulwardrip.github.io/music-video-jukebox/" target="_blank" -->music-video-jukebox</strong>:
+            [<a href="https://github.com/paulwardrip/music-video-jukebox" target="_blank">source</a>]
+            Warning: Youtube APIs have changed and broken this application, I haven't gotten around to updating it.
+            <div style="color: silver">
+            add videos from youtube and this app will play you random songs from your library, you can skip songs.
+            You can pick a song you want to hear, by adding to the queue or you have the option to play immediately.
+            You can download a backup of your library and import it later, since the library is kept in localStorage.
+            This app is very, very functional ... but maybe not quite polished and complete. You may have to reload the
+            browser to get it playing after you add your first set of songs. Enjoy!
+            </div>
         </li>
     </ul>
 </body>
